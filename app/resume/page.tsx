@@ -13,9 +13,8 @@ export default function ResumePage() {
 
       {/* Resume Layout Split */}
       <div className="flex flex-col md:flex-row gap-8 items-start mb-10 pb-8 border-b border-neutral-100">
-        {/* Headshot Frame */}
+        {/* Headshot Frame linked to 4624a21e-b583-4dc5-a2fa-749caa73ff0b.png */}
         <div className="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 rounded-xl overflow-hidden border border-neutral-200 shadow-sm relative">
-          {/* Linked to the headshot image from 4624a21e-b583-4dc5-a2fa-749caa73ff0b.png */}
           <img 
             src="/images/profile.png" 
             alt="Navien Potheri" 
@@ -42,7 +41,7 @@ export default function ResumePage() {
       <section className="mb-10">
         <h2 className="text-xs font-semibold tracking-widest text-neutral-400 uppercase font-mono mb-3">Research Profile</h2>
         <p className="text-sm text-neutral-600 leading-relaxed text-justify">
-          Works on representation learning and understanding large-scale systems with weak supervision, particularly in settings with noisy labels, ambiguous targets, and distribution shift. Experience includes training and evaluating classifiers on image and social media engagement datasets, applying regression to ambiguous targets, and building pipelines for scalable model development and validation. Interested in probabilistic modeling, active inference, and hierarchical representation learning, with a focus on bridging theory (uncertainty, structure, invariance) and applied ML systems.
+          Works on structural alignment, computation, and representation learning to understand large-scale systems with weak supervision, particularly in settings with noisy labels, ambiguous targets, and distribution shift. Experience includes training and evaluating classifiers on image and social media engagement datasets, applying regression to ambiguous targets, and building pipelines for scalable model development and validation. Interested in probabilistic modeling, active inference, and hierarchical representation learning, with a focus on bridging theory (uncertainty, structure, invariance) and applied ML systems.
         </p>
       </section>
 
@@ -59,12 +58,12 @@ export default function ResumePage() {
             <p className="text-xs text-neutral-500 mt-1 leading-relaxed">Understanding how model performance evolves when data distributions change over time, and developing approaches that maintain reliability in dynamic environments.</p>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-neutral-900">Modeling for Robustness under ambiguity</h3>
-            <p className="text-xs text-neutral-500 mt-1 leading-relaxed">Improving the consistency and reliability of learned systems trained on large-scale, uncurated datasets, particularly in the presence of noise, edge cases, and adversarial inputs.</p>
+            <h3 className="text-sm font-medium text-neutral-900">Open-World Alignment & Non-Ergodic Dynamics</h3>
+            <p className="text-xs text-neutral-500 mt-1 leading-relaxed">Formalizing structural boundaries where autonomous agents experience critical drift due to unmodeled environmental variables and path-dependent, non-linear feedback loops.</p>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-neutral-900">Hybrid rule-based systems</h3>
-            <p className="text-xs text-neutral-500 mt-1 leading-relaxed">Exploring systems that integrate statistical learning with explicit constraints or rule-based structures, enabling scalable and interpretable structure in complex environments.</p>
+            <h3 className="text-sm font-medium text-neutral-900">Continuous Belief-State Architectures</h3>
+            <p className="text-xs text-neutral-500 mt-1 leading-relaxed">Moving past episodic calculation layers toward persistent tracking paradigms optimized for continuous, real-time prediction error minimization fields.</p>
           </div>
         </div>
       </section>
@@ -75,7 +74,7 @@ export default function ResumePage() {
         <div className="space-y-2 text-xs font-mono">
           <p><span className="text-neutral-900 font-medium">Programming:</span> Python, TypeScript, React</p>
           <p><span className="text-neutral-900 font-medium">ML Methods:</span> Supervised Learning, Regression, Classification, Feature Extraction</p>
-          <p><span className="text-neutral-900 font-medium">Systems Architecture:</span> ML pipelines, workflow automation, rule-based systems, model evaluation & validation</p>
+          <p><span className="text-neutral-900 font-medium">Systems Architecture:</span> Structural Alignment & Computation, ML pipelines, workflow automation, rule-based systems, model evaluation & validation</p>
         </div>
       </section>
 
@@ -90,10 +89,10 @@ export default function ResumePage() {
             </div>
             <ul className="list-disc list-outside pl-4 text-xs text-neutral-600 space-y-1.5 leading-relaxed">
               <li>Worked on training and evaluation of machine learning classifiers for detecting harmful and adversarial content in large-scale social systems.</li>
-              <li>Integrated image-based detection pipelines, dealing with high-dimensional, sensitive visual data under noisy labeling conditions.</li>
-              <li>Addressed ambiguity by designing processes to improve consistency of model-assisted decisions.</li>
-              <li>Participated in efforts to mitigate misinformation and coordinated adversarial behavior, requiring adaptation to non-stationary data distributions.</li>
-              <li>Operated at the intersection of human-in-the-loop systems and ML models, refining feedback loops for improved performance.</li>
+              <li>Integrated image-based detection pipelines, dealing with high-dimensional, sensitive visual data under noisy labeling conditions and weak supervision.</li>
+              <li>Addressed ambiguity by designing verification processes to improve the statistical consistency of model-assisted decisions.</li>
+              <li>Participated in infrastructure efforts to mitigate misinformation and coordinated adversarial behavior, requiring real-time adaptation to highly non-stationary data distributions.</li>
+              <li>Operated at the intersection of human-in-the-loop validation matrices and probabilistic ML models, refining feedback loops for improved performance.</li>
             </ul>
           </div>
 
@@ -103,9 +102,9 @@ export default function ResumePage() {
               <span className="text-xs font-mono text-neutral-400">Bangalore, India</span>
             </div>
             <ul className="list-disc list-outside pl-4 text-xs text-neutral-600 space-y-1.5 leading-relaxed">
-              <li>Designed rule-based decision systems (Sigma rules) that formalized implicit knowledge into structured workflows.</li>
-              <li>Built early-stage automation pipelines, bridging deterministic logic with scalable system behavior.</li>
-              <li>Improved system efficiency by reducing uncertainty in escalation handling through structured prioritization.</li>
+              <li>Designed rule-based decision systems (Sigma rules) that formalized implicit system knowledge into highly structured automated workflows.</li>
+              <li>Built early-stage automation pipelines, bridging deterministic logic with scalable system behavior to stabilize open-world inputs.</li>
+              <li>Improved system efficiency by reducing operational uncertainty in escalation handling through structured prioritization matrices.</li>
             </ul>
           </div>
 
@@ -115,8 +114,8 @@ export default function ResumePage() {
               <span className="text-xs font-mono text-neutral-400">Chennai, India</span>
             </div>
             <ul className="list-disc list-outside pl-4 text-xs text-neutral-600 space-y-1.5 leading-relaxed">
-              <li>Managed end-to-end supply chain logistics and specialized structural configurations for premium material physical assets.</li>
-              <li>Coordinated multi-tier client deployments and precise physical product installations under variable physical-world environment constraints.</li>
+              <li>Managed end-to-end supply chain logistics, inventory architectures, and specialized structural configurations for high-value physical assets.</li>
+              <li>Coordinated multi-tier client deployments and precise physical product installations under variable, real-world environmental constraints.</li>
             </ul>
           </div>
         </div>
