@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function ProjectsPage() {
   const repositories = [
     {
@@ -7,29 +5,29 @@ export default function ProjectsPage() {
       description: 'Core repository focused on advanced cognitive architectures, state-space representations, and system modeling formalisms.',
       url: 'https://github.com/navienpotheri/Gbrain',
       tag: 'Core Framework',
-      commits: 14
+      commits: 14,
     },
     {
       name: 'multimodal-audio-suite',
       description: 'Audio processing and feature extraction pipelines engineered for cross-modal signal representation and ingestion layers.',
       url: 'https://github.com/navienpotheri/multimodal-audio-suite',
       tag: 'Audio ML',
-      commits: 4
+      commits: 4,
     },
     {
       name: 'sentence-transformers-gpt',
       description: 'Implementations exploring sentence embeddings, dense representation extraction, and transformer-based semantic alignments.',
       url: 'https://github.com/navienpotheri/sentence-transformers-gpt',
       tag: 'NLP / Embeddings',
-      commits: 3
+      commits: 3,
     },
     {
       name: 'ideogram4-lora-study',
       description: 'Experimental study on fine-tuning and parameter-efficient adapters (LoRAs) isolating specific visual and generation constraints.',
       url: 'https://github.com/navienpotheri/ideogram4-lora-study',
       tag: 'Generative ML',
-      commits: 2
-    }
+      commits: 2,
+    },
   ]
 
   return (
@@ -44,7 +42,7 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        {/* Global Contribution Badges matching Screenshot 2026-06-28 224700.png */}
+        {/* Global Contribution Badges */}
         <div className="flex items-center gap-4 bg-neutral-50 border border-neutral-200 rounded-lg p-3 font-mono text-xs">
           <div>
             <span className="block text-neutral-400 text-[10px] uppercase tracking-wider">Yearly Activity</span>

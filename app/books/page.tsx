@@ -5,39 +5,39 @@ export default function BooksPage() {
     {
       title: 'Project Hail Mary',
       author: 'Andy Weir',
-      coverSrc: '/hail-mary.png', // Updated to .png
-      description: 'A solitary astronaut wakes up with amnesia and must use scientific problem-solving, mathematical deductions, and an unexpected alliance to save humanity from an extinction-level solar threat.'
+      coverSrc: '/hail-mary.png',
+      description: 'A solitary astronaut wakes up with amnesia and must use scientific problem-solving, mathematical deductions, and an unexpected alliance to save humanity from an extinction-level solar threat.',
     },
     {
       title: 'The Beginning of Infinity',
       author: 'David Deutsch',
-      coverSrc: '/beginning-of-infinity.png', // Updated to .png
-      description: 'An exploration of the infinite potential of human explanation and progress, arguing that all progress stems from the creation of good explanations through fallible error-correction.'
+      coverSrc: '/beginning-of-infinity.png',
+      description: 'An exploration of the infinite potential of human explanation and progress, arguing that all progress stems from the creation of good explanations through fallible error-correction.',
     },
     {
       title: 'The Alignment Problem',
       author: 'Brian Christian',
-      coverSrc: '/alignment-problem.png', // Updated to .png
-      description: 'A rigorous dive into the engineering and ethical challenges of machine learning systems, mapping the precarious gap between intended human utility models and objective machine actuation.'
+      coverSrc: '/alignment-problem.png',
+      description: 'A rigorous dive into the engineering and ethical challenges of machine learning systems, mapping the precarious gap between intended human utility models and objective machine actuation.',
     },
     {
       title: 'Why We Die',
       author: 'Venki Ramakrishnan',
-      coverSrc: '/why-we-die.png', // Updated to .png
-      description: 'A Nobel laureate’s journey to the frontiers of biology, dissecting the cellular mechanisms of aging, metabolic decline, and the intricate evolutionary trade-offs governing mortality.'
+      coverSrc: '/why-we-die.png',
+      description: 'A Nobel laureate’s journey to the frontiers of biology, dissecting the cellular mechanisms of aging, metabolic decline, and the intricate evolutionary trade-offs governing mortality.',
     },
     {
       title: 'The Vegetarian',
       author: 'Han Kang',
-      coverSrc: '/vegetarian.png', // Updated to .png
-      description: 'A haunting allegory of a woman who completely subverts societal conformity by giving up meat, opting to strip away her human constraints in pursuit of a pure, plant-like existence.'
+      coverSrc: '/vegetarian.png',
+      description: 'A haunting allegory of a woman who completely subverts societal conformity by giving up meat, opting to strip away her human constraints in pursuit of a pure, plant-like existence.',
     },
     {
       title: 'Superintelligence',
       author: 'Nick Bostrom',
-      coverSrc: '/superintelligence.png', // Updated to .png
-      description: 'A foundational analysis of the control problem, examining the profound strategic risks that arise if an artificial intellect reaches a recursive self-improvement explosion.'
-    }
+      coverSrc: '/superintelligence.png',
+      description: 'A foundational analysis of the control problem, examining the profound strategic risks that arise if an artificial intellect reaches a recursive self-improvement explosion.',
+    },
   ]
 
   return (
@@ -60,7 +60,7 @@ export default function BooksPage() {
             <div className="flex-shrink-0 w-20 h-28 relative bg-neutral-100 rounded border border-neutral-200 overflow-hidden shadow-sm">
               <Image 
                 src={book.coverSrc} 
-                alt={`${book.title} cover`}
+                alt="Book Cover"
                 fill
                 className="object-cover"
                 sizes="80px"

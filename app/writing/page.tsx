@@ -19,13 +19,15 @@ const essays = [
 export default function Writing() {
   return (
     <section className="space-y-10">
-      <h1 className="font-serif text-5xl">Writing</h1>
+      <h1 className="font-serif text-4xl font-medium tracking-tight text-neutral-900">Writing</h1>
       <div className="space-y-6">
         {essays.map((essay) => (
           <article key={essay.title} className="border-t border-neutral-200 pt-6">
             <div className="mb-2 flex items-center justify-between gap-4">
-              <h2 className="text-xl font-medium">{essay.title}</h2>
-              <span className="text-xs uppercase tracking-widest text-neutral-500">{essay.status}</span>
+              <h2 className="text-xl font-medium text-neutral-950">{essay.title}</h2>
+              <span className="text-xs uppercase tracking-widest text-neutral-500 font-medium">
+                {essay.status}
+              </span>
             </div>
             <p className="leading-7 text-neutral-600">{essay.description}</p>
           </article>
