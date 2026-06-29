@@ -1,83 +1,65 @@
-import Image from 'next/image'
+import React from 'react';
+import Link from 'next/link';
+
+interface Book {
+  title: string;
+  author: string;
+  category: string;
+  review: string;
+}
+
+const books: Book[] = [
+  {
+    title: "Gödel, Escher, Bach: An Eternal Golden Braid",
+    author: "Douglas R. Hofstadter",
+    category: "Cognitive Science & Computability",
+    review: "A masterpiece formalizing self-referential configurations and strange loops. It serves as the ultimate structural manual for understanding how high-level semantic intelligence emerges out of low-level formal symbol manipulation."
+  },
+  {
+    title: "Behave: The Biology of Humans at Our Best and Worst",
+    author: "Robert Sapolsky",
+    category: "Neurobiology & Systems Dynamics",
+    review: "A monumental multi-scale analysis of continuous neural architectures. Sapolsky traces behavior from milliseconds before action up to evolutionary timelines, perfectly illuminating non-linear biological feedback loops."
+  }
+];
 
 export default function BooksPage() {
-  const books = [
-    {
-      title: 'Project Hail Mary',
-      author: 'Andy Weir',
-      coverSrc: '/hail-mary.png',
-      description: 'A solitary astronaut wakes up with amnesia and must use scientific problem-solving, mathematical deductions, and an unexpected alliance to save humanity from an extinction-level solar threat.',
-    },
-    {
-      title: 'The Beginning of Infinity',
-      author: 'David Deutsch',
-      coverSrc: '/beginning-of-infinity.png',
-      description: 'An exploration of the infinite potential of human explanation and progress, arguing that all progress stems from the creation of good explanations through fallible error-correction.',
-    },
-    {
-      title: 'The Alignment Problem',
-      author: 'Brian Christian',
-      coverSrc: '/alignment-problem.png',
-      description: 'A rigorous dive into the engineering and ethical challenges of machine learning systems, mapping the precarious gap between intended human utility models and objective machine actuation.',
-    },
-    {
-      title: 'Why We Die',
-      author: 'Venki Ramakrishnan',
-      coverSrc: '/why-we-die.png',
-      description: 'A Nobel laureate’s journey to the frontiers of biology, dissecting the cellular mechanisms of aging, metabolic decline, and the intricate evolutionary trade-offs governing mortality.',
-    },
-    {
-      title: 'The Vegetarian',
-      author: 'Han Kang',
-      coverSrc: '/vegetarian.png',
-      description: 'A haunting allegory of a woman who completely subverts societal conformity by giving up meat, opting to strip away her human constraints in pursuit of a pure, plant-like existence.',
-    },
-    {
-      title: 'Superintelligence',
-      author: 'Nick Bostrom',
-      coverSrc: '/superintelligence.png',
-      description: 'A foundational analysis of the control problem, examining the profound strategic risks that arise if an artificial intellect reaches a recursive self-improvement explosion.',
-    },
-  ]
-
   return (
-    <div className="space-y-10 py-4 text-neutral-900 selection:bg-neutral-200">
-      
-      {/* Header Context */}
-      <div className="space-y-2">
-        <h1 className="font-serif text-3xl font-medium tracking-tight">Reading List</h1>
-        <p className="text-sm text-neutral-500 max-w-xl">
-          A collection of books shaping perspectives on computation, cognition, biology, and alignment frameworks.
+    <main className="max-w-3xl mx-auto px-6 py-16 font-sans antialiased text-neutral-900 bg-white selection:bg-neutral-100">
+      {/* Header */}
+      <header className="mb-14">
+        <Link href="/" className="text-sm font-medium text-neutral-400 hover:text-neutral-900 transition-colors duration-200">
+          ← Back Home
+        </Link>
+        <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 mt-4">Reading List</h1>
+        <p className="text-neutral-500 mt-2 text-sm">
+          A collection of text tracking the intersection of computational structures, biological systems, and self-referential networks.
         </p>
-      </div>
-      
-      {/* 2x2 Structured Matrix Grid Layout with Cover Art */}
-      <div className="border-t border-neutral-200 pt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-        {books.map((book) => (
-          <div key={book.title} className="flex gap-4 items-start">
+      </header>
+
+      {/* Divider */}
+      <hr className="border-neutral-100 my-8" />
+
+      {/* Books List */}
+      <div className="space-y-12">
+        {books.map((book, index) => (
+          <div key={index} className="flex flex-col items-start">
+            <div className="flex items-center gap-3 text-xs mb-1 font-mono">
+              <span className="px-2 py-0.5 rounded bg-neutral-50 text-neutral-500 border border-neutral-100">
+                {book.category}
+              </span>
+            </div>
             
-            {/* Book Cover Container */}
-            <div className="flex-shrink-0 w-20 h-28 relative bg-neutral-100 rounded border border-neutral-200 overflow-hidden shadow-sm">
-              <Image 
-                src={book.coverSrc} 
-                alt="Book Cover"
-                fill
-                className="object-cover"
-                sizes="80px"
-                unoptimized 
-              />
-            </div>
-
-            {/* Book Details */}
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-neutral-400 block">{book.author}</span>
-              <h3 className="font-medium text-base text-neutral-900 leading-tight">{book.title}</h3>
-              <p className="text-xs text-neutral-600 leading-relaxed pt-1">{book.description}</p>
-            </div>
-
+            <h2 className="text-xl font-medium tracking-tight text-neutral-900">
+              {book.title} <span className="text-neutral-400 font-normal text-base">by {book.author}</span>
+            </h2>
+            
+            <p className="text-sm text-neutral-500 mt-3 leading-relaxed text-justify">
+              {book.review}
+            </p>
           </div>
         ))}
       </div>
-    </div>
-  )
+    </main>
+  );
 }
